@@ -1,6 +1,6 @@
 # 602-stock-project
 
-**Team Members**: Huu Ho, Justin Letwinsky, Thomas Lu, and Vladimir Rife
+**Team Members**: Huu Ho, Justin Letwinsky, and Vladimir Rife
 
 **Course**: MSML602 - Fall 2023
 
@@ -10,7 +10,7 @@ Before proceeding, ensure that you have all the required libraries installed in 
 
 Creating and activating the right virtual enviornment (venv) using Anaconda:
 ```bash
-conda create --name school python=3.10.13
+conda create --name stock-app python=3.10.13
 conda activate school
 ```
 
