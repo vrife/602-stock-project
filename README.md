@@ -6,7 +6,15 @@
 
 ## Prerequisites
 
-Before proceeding, ensure that you have all the required libraries installed in your Python environment:
+Before proceeding, ensure that you have all the required libraries installed in your Python 3.10.13 environment:
+
+Creating and activating the right virtual enviornment (venv) using Anaconda:
+```bash
+conda create --name school python=3.10.13
+conda activate school
+```
+
+Installing the packages in the venv:
 ```bash
 pip install -r requirements.txt
 ```
