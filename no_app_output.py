@@ -34,7 +34,7 @@ last_date = x[-1].astype('int64') // 1e9
 last_date_datetime = datetime.utcfromtimestamp(last_date)
 next_date_datetime = last_date_datetime + timedelta(days=1)
 next_date_timestamp = np.array([[pd.Timestamp(next_date_datetime).value]])
-print(f"Date of the next stock price we'll be predicting: {next_date_datetime}")
+print("Date of the next stock price we'll be predicting: ", next_date_datetime)
 
 # Fit and predict for Linear Regression
 lin = PolynomialFeatures(degree=1, include_bias=False)
@@ -91,11 +91,10 @@ predicted_scaled_price = lstm_model.predict(X_recent_lstm)
 # Inverse transform the prediction to get the actual stock price
 lstm_pred = scaler.inverse_transform(predicted_scaled_price)[0][0]
 
-print(f"lin_pred: ${round(lin_pred, 2)}")
-print(f"poly_pred: ${round(poly_pred, 2)}")
-print(f"def_lasso_pred: ${round(def_lasso_pred, 2)}")
-print(f"tun_lasso_pred: ${round(tun_lasso_pred, 2)}")
-print(f"def_ridge_pred: ${round(def_ridge_pred, 2)}")
-print(f"tun_ridge_pred: ${round(tun_ridge_pred, 2)}")
-print(f"cnn_pred: ${round(cnn_pred, 2)}")
-print(f"lstm_pred: ${round(lstm_pred, 2)}")
+print("lin_pred: $", round(lin_pred, 2))
+print("def_lasso_pred: $", round(def_lasso_pred, 2))
+print("tun_lasso_pred: $", round(tun_lasso_pred, 2))
+print("def_ridge_pred: $", round(def_ridge_pred, 2))
+print("tun_ridge_pred: $", round(tun_ridge_pred, 2))
+print("cnn_pred: $", round(cnn_pred, 2))
+print("lstm_pred: $", round(lstm_pred, 2))
